@@ -36,8 +36,7 @@ const TextBox = () => {
     // Toggle the checkbox
     updatedNumbers[id - 1].isChecked = !updatedNumbers[id - 1].isChecked;
 
-    // Uncheck all other checkboxes if the maximum count (20) is exceeded
-    if (updatedNumbers[id - 1].isChecked && selectedCount >= 20) {
+    if (updatedNumbers[id - 1].isChecked && selectedCount >= 2000) {
       updatedNumbers.forEach((num) => {
         if (num.id !== id) {
           num.isChecked = false;
@@ -74,12 +73,12 @@ const TextBox = () => {
   const selectedPositions = selectedIds.join(", ");
 
   return (
-    <div className="flex justify-around border-inherit border ">
+    <div className="flex justify-center border-inherit border py-5">
       <div>
         <h1 className="text-2xl font-bold bg-emerald-300 text-center rounded-md border border-indigo-600 py-2">
           step 1
         </h1>
-        <div className="flex gap-2">
+        <div className="flex gap-2 my-2">
           <p className="rounded-md border border-orange-300 px-1 bg-orange-100">
             Number of textbox:
           </p>
@@ -92,17 +91,23 @@ const TextBox = () => {
           <button className="btn btn-primary w-32  " onClick={handleAddField}>
             Add Field
           </button>
-          <button onClick={handleSelectAll}>Select All</button>
+          <button
+            className="rounded-md border border-orange-300 px-1 bg-orange-100 p-2 my-2"
+            onClick={handleSelectAll}
+          >
+            Select All
+          </button>
         </div>
         {numbers.map((num) => (
-          <div key={num.id}>
+          <div className="flex gap-2 my-2 items-center" key={num.id}>
             <input
+              className="checkbox checkbox-accent checkbox-md"
               type="checkbox"
               checked={num.isChecked}
               onChange={() => handleCheckboxChange(num.id)}
             />
-            <label>Number {num.id}: </label>
             <input
+              className="input input-bordered w-full"
               type="number"
               value={num.value}
               onChange={(e) => handleInputChange(num.id, e.target.value)}
@@ -111,16 +116,29 @@ const TextBox = () => {
           </div>
         ))}
 
-        {selectedCount === numbers.length ? (
-          <p>Selected all, Total Sum: {calculateSum()}</p>
-        ) : (
-          <p>
-            Selected {selectedCount} item{selectedCount !== 1 ? "s" : ""}, their
-            position is {selectedPositions}, Total Sum: {calculateSum()}
-          </p>
-        )}
+        <div className="flex gap-2 items-center">
+          <p>Output is: </p>
+          <div className="bg-orange-100 p-4">
+            {selectedCount === numbers.length ? (
+              <p>
+                Selected all{" "}
+                <span className="font-bold">{numbers.length} items</span>, and
+                Total Number is: {calculateSum()}
+              </p>
+            ) : (
+              <p className="">
+                Selected {selectedCount} item{selectedCount !== 1 ? "s" : ""},
+                their{" "}
+                <span className="font-bold">
+                  position is{selectedPositions}
+                </span>
+                ,and Total Number is: {calculateSum()}
+              </p>
+            )}
+          </div>
+        </div>
       </div>
-      <div>
+      {/* <div>
         <h1>step 2</h1>
         <p>
           Number of textbox:<span> {numbers.length}</span>
@@ -153,7 +171,7 @@ const TextBox = () => {
             position is {selectedPositions}, Total Sum: {calculateSum()}
           </p>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
