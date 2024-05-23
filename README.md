@@ -1,9 +1,42 @@
-# React + Vite
-src\components\TextBox.jsx
+# Maliha Poly Job Task
+This repository contains the job task project for Maliha Poly Tex Fiber Industry Limited. The project is built with React, Vite, and TailwindCSS.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Table of Contents
 
-Currently, two official plugins are available:
+- Demo
+- Installation
+- DevDependencies
+- Contributing
+- Contact
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  ## Demo
+ Live Demo: Live Demo Link : https://maliha-poly-job-task.vercel.app/
+
+ ## Installation
+
+ To run this project locally, follow these steps:
+1. Clone the repository:
+```bash
+  git clone https://github.com/Nasima-akter/maliha-poly-job-task.git
+```
+
+2. Navigate to the project directory:
+```bash
+  cd maliha-poly-job-task
+```
+
+3. Install the dependencies:
+```bash
+  cd maliha-poly-job-task
+```
+
+## DevDependencies
+- daisyui: ^4.11.1
+- tailwindcss: ^3.4.3
+- vite: ^5.2.0
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
+
+## Contact
+- Mst Nasima Akter
+- nasimatpi@gmail.com
