@@ -27,7 +27,7 @@ This repository contains the job task project for Maliha Poly Tex Fiber Industry
 
 3. Install the dependencies:
 ```bash
-  cd maliha-poly-job-task
+  npm install
 ```
 
 ## DevDependencies
