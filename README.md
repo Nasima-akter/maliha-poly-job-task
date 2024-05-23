@@ -5,6 +5,7 @@ This repository contains the job task project for Maliha Poly Tex Fiber Industry
 
 - Demo
 - Installation
+- Usage
 - DevDependencies
 - Contributing
 - Contact
@@ -29,7 +30,10 @@ This repository contains the job task project for Maliha Poly Tex Fiber Industry
 ```bash
   npm install
 ```
-
+## Usage
+```bash
+  npm run dev
+```
 ## DevDependencies
 - daisyui: ^4.11.1
 - tailwindcss: ^3.4.3
